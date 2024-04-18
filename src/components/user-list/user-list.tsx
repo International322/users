@@ -1,8 +1,9 @@
+import React from 'react';
 import styles from './user-list.module.css';
 import UserCard from '../user-card/user-card';
 import { User } from '../../types/type';
 
-function UserList({ deleteUser, filteredUsers }: { deleteUser: any; filteredUsers: any }) {
+const UserList = React.memo(({ deleteUser, filteredUsers }: { deleteUser: any; filteredUsers: any }) => {
   return (
     <div className={styles.userList}>
       {filteredUsers.map((user: User) => (
@@ -10,6 +11,6 @@ function UserList({ deleteUser, filteredUsers }: { deleteUser: any; filteredUser
       ))}
     </div>
   );
-}
+});
 
 export default UserList;

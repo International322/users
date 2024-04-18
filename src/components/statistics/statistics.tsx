@@ -1,3 +1,4 @@
+import React from 'react';
 import { User } from '../../types/type';
 import styles from './statistics.module.css';
 
@@ -17,7 +18,7 @@ const calculateStatistics = (users: User[]) => {
   return { genderGroups, ageGroups };
 };
 
-const Statistics = ({ users }: { users: User[] }) => {
+const Statistics = React.memo(({ users }: { users: User[] }) => {
   const { genderGroups, ageGroups } = calculateStatistics(users);
 
   const sortedAgeGroupKeys = Object.keys(ageGroups).sort((a, b) => {
@@ -33,7 +34,7 @@ const Statistics = ({ users }: { users: User[] }) => {
         <h2>Age Groups</h2>
         {sortedAgeGroupKeys.map((age) => (
           <div key={age}>
-            {age} {ageGroups[age]} users
+            {age} - {ageGroups[age]} users
           </div>
         ))}
       </div>
@@ -44,6 +45,6 @@ const Statistics = ({ users }: { users: User[] }) => {
       </div>
     </div>
   );
-};
+});
 
 export default Statistics;
