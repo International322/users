@@ -1,0 +1,25 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 32px;
+}
+
+.inputSearch {
+  background: #1e2027;
+  color: #dcd8d3;
+  border: none;
+  width: 332px;
+  font-size: 16px;
+  padding: 16px 14px;
+  border-radius: 16px;
+}
+
+.buttonRefresh {
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: #cf7b5a;
+  font-size: 14px;
+  font-weight: 600;
+}

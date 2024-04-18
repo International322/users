@@ -1,0 +1,13 @@
+.statistics {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  align-items: flex-start;
+  background: #1e2027;
+  color: #dcd8d3;
+  border-radius: 16px;
+  padding: 24px;
+  margin: 24px;
+}
